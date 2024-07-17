@@ -29,7 +29,7 @@ io.on('connection',(socket)=>{
   
     socket.on('typing',(data)=>{
       
-        io.to(data.roomid).emit('someone_typing');
+        socket.broadcast.to(data.roomid).emit('someone_typing');
     })
    
 });
