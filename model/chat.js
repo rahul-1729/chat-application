@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
 
 const chatSchema =new mongoose.Schema({
-    cotent:{
+    content:{
         type: String,
 
     },
-    user1:{
+    user:{
         type: String,
-    },
-    user2:{
-          type: String,
     },
     roomId:{
         type: String
@@ -18,4 +15,4 @@ const chatSchema =new mongoose.Schema({
 
 const Chat = mongoose.model('Chat', chatSchema);
 
-module.exports = chat;
+module.exports = Chat;
